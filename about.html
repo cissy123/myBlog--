@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1,maximum-scale=1,maximum-scale=1, user-scalable=no" name="viewport">
+	<title>关于客官里边请</title>
+	<link rel="SHORTCUT ICON" href="images/icon/index_icon.jpeg">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/slide_bar.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<!-- 代码部分begin -->
+	<header class="header">
+		<span class="btn-slide-bar"></span>
+		<h1 class="page-title">关于</h1>
+
+		<div class="slide-bar">
+		<ul>
+		<li><a href="index.html" target="_self">首页</a></li>
+		<li><a href="" target="_self">填坑</a></li>
+		<li><a href="" target="_self">小实验</a></li>
+		<li><a href="" target="_self">小随笔</a></li>
+		<li><a href="" target="_self">留言板</a></li>
+		<li><a href="about.html" target="_self">关于</a></li>
+		<li><a href="" target="_self">这块写啥呢</a></li>
+		</ul>
+	</div>
+	</header>
+	<div class="wraper-page">
+		
+	</div>
+	
+	<script>
+	document.addEventListener("DOMContentLoaded", function(){
+		(function(){
+			var _btn  = document.querySelector(".btn-slide-bar"),
+				_body = document.querySelector("body");
+				_btn.onclick = function(){
+					_body.classList.toggle("active");
+
+					 var scroll_offset = $("body").offset();  
+ 					 $("body,html").animate({
+  					 scrollTop:scroll_offset.top  
+  					 },500);
+				}
+		})(window)
+	},false);
+
+	
+	</script>
+	<!-- 代码部分end -->
+</body>
+</html>
